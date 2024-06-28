@@ -1,0 +1,17 @@
+{
+    "extends": [
+      "react-app",
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "plugins": ["react"],
+    "rules": {
+      "no-unused-vars": "off"  // Desactivar la regla de variables no utilizadas
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  }
+  

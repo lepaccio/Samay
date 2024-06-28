@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import Search from './components/Search';
+import EvaluateOptions from './components/EvaluateOptions';
+import RentRoom from './components/RentRoom';
+import SignIn from './components/SignIn'; // Asegúrate de que el nombre coincida con el archivo
+import styled from 'styled-components';
+
+const Container = styled.div`
+  padding: 20px;
+  font-family: Arial, sans-serif;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Container>
+        <Routes>
+          <Route path="/" element={<SignIn />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="/evaluate-options" element={<EvaluateOptions />} />
+          <Route path="/rent-room" element={<RentRoom />} />
+        </Routes>
+      </Container>
+    </Router>
   );
 }
 
