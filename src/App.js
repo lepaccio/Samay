@@ -8,7 +8,6 @@ import SignIn from './components/SignIn'; // Asegúrate de que el nombre coincid
 import styled from 'styled-components';
 
 const Container = styled.div`
-  padding: 20px;
   font-family: Arial, sans-serif;
 `;
 
